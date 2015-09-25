@@ -1,0 +1,26 @@
+sebi_dev:
+  build: .
+  ports:
+    - "3000:3000"
+    - "4200:4200"
+    - "35729:35729"
+    - "7357:7357"
+    - "22:22"
+  volumes:
+    - .:/home/sebi/workspace/project
+  links:
+    - redis
+    - postgres
+
+redis:
+  image: redis
+postgres:
+  image: postgres
+  volumes:
+    - $HOME/db/postgres
+mongo:
+  image: mongo:3.1.8
+  volumes:
+    - $HOME/db/mongo
+  ports:
+    - "27017:27017"
