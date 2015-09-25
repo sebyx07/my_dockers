@@ -78,7 +78,7 @@ RUN /bin/bash -c 'source ~/.bashrc && kiex install 1.0.5 && kiex default 1.0.5'
 RUN curl -L -s get.jenv.io | bash
 RUN /bin/bash -c 'source ~/.bashrc && jenv install java 1.8.0_40 && jenv install maven 3.3.1'
 
-WORKDIR ~/workspace
+WORKDIR /home/sebi/
 
 #### Ports
 

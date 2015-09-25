@@ -11,6 +11,7 @@ sebi_dev:
   links:
     - redis
     - postgres
+    - mongo
 
 redis:
   image: redis
