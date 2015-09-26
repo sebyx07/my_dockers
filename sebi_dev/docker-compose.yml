@@ -5,9 +5,9 @@ sebi_dev:
     - "4200:4200"
     - "35729:35729"
     - "7357:7357"
-    - "22:22"
+    - "9292:22"
   volumes:
-    - .:/home/sebi/workspace/project
+    - .:/home/sebi/workspace/
   links:
     - redis
     - postgres
